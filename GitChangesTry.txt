@@ -1,1 +1,3 @@
 Git Changes trying merge to master.
+
+Now through CLI
