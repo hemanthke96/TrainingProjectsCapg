@@ -1,0 +1,6 @@
+com\free\pages\CalendarPage.class
+com\free\pages\HomePage.class
+com\free\pages\RestOfPages.class
+com\free\util\TestUtil.class
+com\free\pages\LoginPage.class
+com\free\util\SetupDriver.class

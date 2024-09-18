@@ -1,0 +1,43 @@
+@HnC
+Feature: Homepage and Calender Functionality
+
+  Background:                           # ./src/test/resources/Feature/HomeNcal.feature:3
+    Given user launches the browser     # Login_Test_Steps.launch_the_browser()
+    When user click on login link       # Login_Test_Steps.click_on_login_link()
+    Then user navigates to Login Page   # Login_Test_Steps.user_navigates_to_Login_Page()
+    When user enters email and password # Login_Test_Steps.user_enters_email_and_password()
+    Then user clicks on Login button    # Login_Test_Steps.user_clicks_on_Login_button()
+    Then homepage is displayed          # Login_Test_Steps.homepage_is_displayed()
+
+  @HnC @Calendarcreate
+  Scenario: Create Calendar Event       # ./src/test/resources/Feature/HomeNcal.feature:24
+    Given user is on calendar page      # HomNcalen_Test_Steps.user_is_on_calendar_page()
+    When user click on create new event # HomNcalen_Test_Steps.user_click_on_create_new_event()
+    And enter details about event       # HomNcalen_Test_Steps.enter_details_about_event()
+      org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@class='calendarField react-datepicker-ignore-onclickoutside']"}
+  (Session info: chrome=103.0.5060.114)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'LIN20003731', ip: '192.168.0.232', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.114, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: C:\Users\EADKUMAR\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:56185}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: dcbb36d99474cea4480629a367df60ea
+*** Element info: {Using=xpath, value=//input[@class='calendarField react-datepicker-ignore-onclickoutside']}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at com.free.pages.CalendarPage.exceldataentry(CalendarPage.java:89)
+	at step_definations.HomNcalen_Test_Steps.enter_details_about_event(HomNcalen_Test_Steps.java:121)
+	at ✽.enter details about event(./src/test/resources/Feature/HomeNcal.feature:27)
+
+    Then click on save                  # HomNcalen_Test_Steps.click_on_save()
